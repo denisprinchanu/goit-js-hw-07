@@ -30,24 +30,15 @@ const images = [
 
 
 
-const galleryList = document.querySelector('.gallery');
 
+
+const galleryList = document.querySelector('.gallery');
+let html = '';
 
 images.forEach(img => {
-
-  const listItem = document.createElement('li');
-  const imgElement = document.createElement('img');
-
-
-  imgElement.src = img.url;
-  imgElement.alt = img.alt;
-
-  listItem.appendChild(imgElement);
-  galleryList.appendChild(listItem);
-
-
-  console.log(galleryList);
-
-
-
+  html += `<li><img src="${img.url}" alt="${img.alt}"></li>`;
 });
+
+galleryList.innerHTML = html;
+
+

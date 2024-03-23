@@ -11,8 +11,8 @@ form.addEventListener('submit', function(event) {
     const password = this.elements.password;
 
 
-        const loginValue = login.value.trim();
-        const passwordValue = password.value.trim();
+        const loginValue = login.value;
+        const passwordValue = password.value;
         
     
 
@@ -21,12 +21,10 @@ form.addEventListener('submit', function(event) {
        return;
       }
 
-
-      const formData = {
-        email: login,
-        password: password
+    const formData = {
+        email: loginValue,
+        password: passwordValue
     };
-
     
     console.log(formData);
 
@@ -34,8 +32,3 @@ form.addEventListener('submit', function(event) {
     this.reset();
 });
 
-
-
-
-
-    
